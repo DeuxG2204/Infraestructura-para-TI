@@ -1,6 +1,9 @@
 # Use an official Node.js runtime as a parent image
 FROM node:24-alpine
 
+# Forzar actualización de busybox
+RUN apk update && apk upgrade busybox
+
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
